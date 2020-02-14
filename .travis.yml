@@ -122,7 +122,7 @@ matrix:
         - export PATH="$TRAVIS_BUILD_DIR/protoc/bin:$PATH"
       script:
         - cd android
-        - ./gradlew assembleRelease bundleRelease
+        - ./gradlew assembleDebug bundleDebug
         - export DEPLOY_FILE_BASE="Chiaki-$CHIAKI_VERSION-Android"
         - export DEPLOY_FILE="$DEPLOY_FILE_BASE.a[pa][kb]"
         - cp app/build/outputs/apk/release/app-release.apk "../$DEPLOY_FILE_BASE.apk"
